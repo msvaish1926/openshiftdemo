@@ -43,8 +43,8 @@ RUN apk add --no-cache --virtual buildtools build-base linux-headers udev python
     cp -R node_modules prod_node_modules
 
 RUN \
-   echo 'alias python=python3' >> /root/.bashrc && \
-   echo 'alias pip=pip3' >> /root/.bashrc && \
+   echo 'alias python="/usr/bin/python3"' >> /root/.bashrc && \
+   echo 'alias pip="/usr/bin/pip3"' >> /root/.bashrc && \
    source /root/.bashrc
 
 
